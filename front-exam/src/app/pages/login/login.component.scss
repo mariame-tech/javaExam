@@ -1,0 +1,67 @@
+/* Ensure the form is visible */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #f0f2f5; /* Light background */
+  }
+  
+  /* Style the form */
+  .login-form {
+    width: 300px; /* Adjust width as needed */
+    padding: 24px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Add shadow */
+  }
+  
+  /* Style the input fields */
+  .login-form nz-input-group {
+    margin-bottom: 16px; /* Space between inputs */
+  }
+  
+  .login-form nz-input-group input {
+    background-color: transparent; /* Transparent input background */
+    border: 1px solid #d9d9d9; /* Light border */
+    border-radius: 4px; /* Rounded input corners */
+    padding: 8px; /* Add padding */
+  }
+  
+  /* Style the icons */
+  .login-form nz-input-group nz-icon {
+    color: rgba(0, 0, 0, 0.25); /* Icon color */
+  }
+  
+  /* Style the login button */
+  .login-form-button {
+    width: 100%; /* Full-width button */
+    margin-bottom: 12px; /* Space below the button */
+  }
+  
+  /* Style the "Forgot password" link */
+  .login-form-forgot {
+    float: right;
+    color: #1890ff; /* Link color */
+  }
+  
+  /* Style the "Remember me" checkbox */
+  .login-form-margin {
+    margin-bottom: 12px; /* Space below the checkbox */
+  }
+
+  .login-form nz-layout {
+    text-align: center;
+    font-size: 18px; /* Taille de police */
+    font-weight: bold; /* Texte en gras */
+    margin-bottom: 24px; /* Espace entre le layout et le premier form-item */
+  }
+  /* Style pour le lien "Register now" */
+a {
+  color: #1890ff; /* Couleur du lien */
+  text-decoration: none; /* Supprimer le soulignement */
+}
+
+a:hover {
+  text-decoration: underline; /* Souligner au survol */
+}

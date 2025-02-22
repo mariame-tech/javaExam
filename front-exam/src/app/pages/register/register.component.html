@@ -1,0 +1,132 @@
+<nz-layout class="register-container">
+    <nz-content class="register-content">
+      <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" class="register-form">
+        <h2 class="form-title">Register</h2>
+  
+        <div class="form-grid">
+          <!-- First Name -->
+          <div class="form-group">
+            <nz-form-control>
+              <nz-input-group [nzPrefix]="prefixUser">
+                <input nz-input formControlName="firstName" placeholder="Enter first name" />
+              </nz-input-group>
+              <ng-template #prefixUser>
+                <i nz-icon nzType="user" nzTheme="outline"></i>
+              </ng-template>
+              <div *ngIf="getControl('firstName')?.invalid && getControl('firstName')?.touched" class="error">
+                First name is required
+              </div>
+            </nz-form-control>
+          </div>
+  
+          <!-- Last Name -->
+          <div class="form-group">
+            <nz-form-control>
+              <nz-input-group [nzPrefix]="prefixUser">
+                <input nz-input formControlName="lastName" placeholder="Enter last name" />
+              </nz-input-group>
+              <ng-template #prefixUser>
+                <i nz-icon nzType="user" nzTheme="outline"></i>
+              </ng-template>
+              <div *ngIf="getControl('lastName')?.invalid && getControl('lastName')?.touched" class="error">
+                Last name is required
+              </div>
+            </nz-form-control>
+          </div>
+  
+          <!-- Professional Email -->
+          <div class="form-group">
+            <nz-form-control>
+              <nz-input-group [nzPrefix]="prefixMail">
+                <input nz-input formControlName="emailPro" placeholder="Enter professional email" />
+              </nz-input-group>
+              <ng-template #prefixMail>
+                <i nz-icon nzType="mail" nzTheme="outline"></i>
+              </ng-template>
+              <div *ngIf="getControl('emailPro')?.invalid && getControl('emailPro')?.touched" class="error">
+                Professional email is required
+              </div>
+            </nz-form-control>
+          </div>
+  
+          <!-- Personal Email -->
+          <div class="form-group">
+            <nz-form-control>
+              <nz-input-group [nzPrefix]="prefixMail">
+                <input nz-input formControlName="emailPerso" placeholder="Enter personal email" />
+              </nz-input-group>
+              <ng-template #prefixMail>
+                <i nz-icon nzType="mail" nzTheme="outline"></i>
+              </ng-template>
+              <div *ngIf="getControl('emailPerso')?.invalid && getControl('emailPerso')?.touched" class="error">
+                Personal email is required
+              </div>
+            </nz-form-control>
+          </div>
+  
+          <!-- Phone Number -->
+          <div class="form-group">
+            <nz-form-control>
+              <nz-input-group [nzPrefix]="prefixPhone">
+                <input nz-input formControlName="phoneNumber" placeholder="Enter phone number" />
+              </nz-input-group>
+              <ng-template #prefixPhone>
+                <i nz-icon nzType="mobile" nzTheme="outline"></i>
+              </ng-template>
+              <div *ngIf="getControl('phoneNumber')?.invalid && getControl('phoneNumber')?.touched" class="error">
+                Phone number is required
+              </div>
+            </nz-form-control>
+          </div>
+  
+          <!-- Address -->
+          <div class="form-group">
+            <nz-form-control>
+              <nz-input-group [nzPrefix]="prefixHome">
+                <input nz-input formControlName="address" placeholder="Enter address" />
+              </nz-input-group>
+              <ng-template #prefixHome>
+                <i nz-icon nzType="home" nzTheme="outline"></i>
+              </ng-template>
+              <div *ngIf="getControl('address')?.invalid && getControl('address')?.touched" class="error">
+                Address is required
+              </div>
+            </nz-form-control>
+          </div>
+  
+          <!-- Registration Number -->
+          <div class="form-group">
+            <nz-form-control>
+              <nz-input-group [nzPrefix]="prefixId">
+                <input nz-input formControlName="registrationNu" placeholder="Enter registration number" />
+              </nz-input-group>
+              <ng-template #prefixId>
+                <i nz-icon nzType="idcard" nzTheme="outline"></i>
+              </ng-template>
+              <div *ngIf="getControl('registrationNu')?.invalid && getControl('registrationNu')?.touched" class="error">
+                Registration number is required
+              </div>
+            </nz-form-control>
+          </div>
+  
+          <!-- Archive Checkbox -->
+          <div class="form-group">
+            <nz-form-control>
+              <label nz-checkbox formControlName="archive">Archive</label>
+            </nz-form-control>
+          </div>
+        </div>
+  
+        <!-- Conteneur pour le bouton et le lien "or Login" -->
+        <div class="button-login-container">
+          <button nz-button nzType="primary" [disabled]="isLoading" [nzLoading]="isLoading" class="register-button">
+            Register
+          </button>
+          <div class="login-link">
+            <span>or</span>
+            <a routerLink="/login">Log in!!</a>
+          </div>
+        </div>
+      </form>
+    </nz-content>
+</nz-layout>
