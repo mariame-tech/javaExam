@@ -1,33 +1,65 @@
-<div class="login-container">
-    <form nz-form class="login-form">
-    <nz-layout>Login to your account</nz-layout>
-        
-      <nz-form-item>
-        <nz-form-control nzErrorTip="Please input your username!">
-          <nz-input-group nzPrefixIcon="user" >
-            <input type="text" nz-input formControlName="username" placeholder="Username" />
-          </nz-input-group>
-        </nz-form-control>
-      </nz-form-item>
-      <nz-form-item>
-        <nz-form-control nzErrorTip="Please input your Password!">
-          <nz-input-group nzPrefixIcon="lock">
-            <input type="password" nz-input formControlName="password" placeholder="Password" />
-          </nz-input-group>
-        </nz-form-control>
-      </nz-form-item>
-      <div nz-row class="login-form-margin">
-        <div nz-col [nzSpan]="12">
-          <label nz-checkbox formControlName="remember">
-            <span>Remember me</span>
-          </label>
+<!-- <nz-layout class="login-container">
+  <nz-content class="login-content">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="register-form">
+      <h2 class="form-title">Register</h2>
+
+     
+       
+        <div class="form-group">
+          <nz-form-control>
+            <nz-input-group [nzPrefix]="prefixMail">
+              <input nz-input formControlName="emailPro" placeholder="Enter professional email" />
+            </nz-input-group>
+            <ng-template #prefixMail>
+              <i nz-icon nzType="mail" nzTheme="outline"></i>
+            </ng-template>
+            <div *ngIf="getControl('emailPro')?.invalid && getControl('emailPro')?.touched" class="error">
+              Professional email is required
+            </div>
+          </nz-form-control>
         </div>
-        <div nz-col [nzSpan]="12">
-          <a class="login-form-forgot">Forgot password</a>
+
+      
+        <div class="form-group">
+          <nz-form-control>
+            <nz-input-group [nzPrefix]="prefixMail">
+              <input nz-input formControlName="emailPerso" placeholder="Enter personal email" />
+            </nz-input-group>
+            <ng-template #prefixMail>
+              <i nz-icon nzType="mail" nzTheme="outline"></i>
+            </ng-template>
+            <div *ngIf="getControl('emailPerso')?.invalid && getControl('emailPerso')?.touched" class="error">
+              Personal email is required
+            </div>
+          </nz-form-control>
+        </div>
+
+
+        
+        <div class="form-group">
+          <nz-form-control>
+            <nz-input-group [nzPrefix]="prefixId">
+              <input nz-input formControlName="registrationNu" placeholder="Enter registration number" />
+            </nz-input-group>
+            <ng-template #prefixId>
+              <i nz-icon nzType="idcard" nzTheme="outline"></i>
+            </ng-template>
+            <div *ngIf="getControl('registrationNu')?.invalid && getControl('registrationNu')?.touched" class="error">
+              Registration number is required
+            </div>
+          </nz-form-control>
+        </div>
+
+    
+      <div class="button-login-container">
+        <button nz-button nzType="primary" [disabled]="isLoading" [nzLoading]="isLoading" class="register-button">
+          Register
+        </button>
+        <div class="login-link">
+          <span>or</span>
+          <a routerLink="/login">Register now!!</a>
         </div>
       </div>
-      <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">Log in</button>
-      Or
-      <a routerLink="/register">register now!</a>
     </form>
-</div>
+  </nz-content>
+</nz-layout> -->

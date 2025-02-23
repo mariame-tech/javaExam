@@ -8,8 +8,9 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMessageModule, NzMessageService } from 'ng-zorro-antd/message';
-import { StudentService } from '../../services/student.service';
+
 import { CommonModule } from '@angular/common';
+import { StudentService } from '../../services/student/student.service';
 
 @Component({
   selector: 'app-register',
@@ -26,10 +27,10 @@ import { CommonModule } from '@angular/common';
     CommonModule,
     NzMessageModule
   ],
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss']
+  templateUrl: './student.component.html',
+  styleUrls: ['./student.component.scss']
 })
-export class RegisterComponent implements OnInit{
+export class StudentComponent implements OnInit{
 
  
   isLoading = false;
@@ -38,7 +39,7 @@ export class RegisterComponent implements OnInit{
     lastName: ['', Validators.required],
     emailPro: ['', [Validators.required, Validators.email]],
     emailPerso: ['', [Validators.required, Validators.email]],
-    phoneNumber: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
+    phoneNumber: ['', [Validators.required, Validators.pattern(/^\d{8,15}$/)]],
     address: ['', Validators.required],
     registrationNu: ['', Validators.required],
     archive: [false]

@@ -1,13 +1,15 @@
 import { Routes } from '@angular/router';
-import { LoginComponent } from './pages/login/login.component';
-import { WelcomeComponent } from './pages/welcome/welcome.component';
-import { RegisterComponent } from './pages/register/register.component';
-import { DashboardComponent } from './layouts/dashboard/dashboard.component';
+import { ClassesComponent } from './pages/classes/classes.component';
+import { StudentComponent } from './pages/students/student.component';
+import { RegistrationsComponent } from './pages/registrations/registrations.component';
+import { ListStudentsComponent } from './pages/list-students/list-students.component';
 
 export const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: '/login' },
-  { path: 'login', component: LoginComponent },
-  { path: 'welcome', component: WelcomeComponent },
-  { path: 'register', component: RegisterComponent },
-  {path:'studentDash',component:DashboardComponent}
+
+  { path: 'student', component: StudentComponent },
+  {path:'classes',component:ClassesComponent},
+  {path:'list-student',component:ListStudentsComponent},
+  { path: 'registrations', component: RegistrationsComponent },
+  { path: '', pathMatch: 'full', redirectTo: '/welcome' },
+  { path: 'welcome', loadChildren: () => import('./pages/welcome/welcome.routes').then(m => m.WELCOME_ROUTES) }
 ];

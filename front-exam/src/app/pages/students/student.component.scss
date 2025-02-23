@@ -2,13 +2,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: #f0f2f5;
+  background-color: transparent !important;
+  //background-color: #f0f2f5;
   padding: 20px;
 }
 
 .register-content {
-  background: white;
+  // background: white;
   padding: 24px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -59,16 +59,8 @@
   font-size: 16px; /* Taille du texte */
 }
 
-.login-link {
-  display: flex;
-  align-items: center; /* Aligner verticalement */
-  gap: 8px; /* Espacement entre "or" et "Login" */
-}
 
-.login-link a {
-  color: #1890ff; /* Couleur du lien */
-  text-decoration: none;
-}
+
 
 .login-link a:hover {
   text-decoration: underline; /* Souligner le lien au survol */

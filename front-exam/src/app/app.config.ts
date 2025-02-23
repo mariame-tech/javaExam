@@ -9,9 +9,12 @@ import fr from '@angular/common/locales/fr';
 import { FormsModule } from '@angular/forms';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideHttpClient } from '@angular/common/http';
+import { NzModalModule } from 'ng-zorro-antd/modal';
 
 registerLocaleData(fr);
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), provideNzIcons(), provideNzI18n(fr_FR), importProvidersFrom(FormsModule), provideAnimationsAsync(), provideHttpClient()]
+  providers: [provideRouter(routes), provideNzIcons(), provideNzI18n(fr_FR), importProvidersFrom(FormsModule,NzModalModule), provideAnimationsAsync(), provideHttpClient()]
 };
+
+

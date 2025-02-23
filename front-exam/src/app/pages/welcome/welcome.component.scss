@@ -1,0 +1,21 @@
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre horizontalement */
+    justify-content: center; /* Centre verticalement */
+    height: 60vh; /* Prend toute la hauteur de la vue */
+    text-align: center; /* Centre le texte */
+  }
+  
+  
+  
+  button[nz-button] {
+    background-color: #1890ff; /* Couleur bleue pour les boutons */
+    border-color: #1890ff; /* Bordure bleue */
+    color: white; /* Texte blanc */
+  }
+  
+  button[nz-button]:hover {
+    background-color: #40a9ff; /* Couleur bleue plus claire au survol */
+    border-color: #40a9ff; /* Bordure bleue plus claire au survol */
+  }

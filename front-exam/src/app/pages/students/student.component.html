@@ -1,7 +1,7 @@
 <nz-layout class="register-container">
     <nz-content class="register-content">
-      <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" class="register-form">
-        <h2 class="form-title">Register</h2>
+      <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" >
+        <h2 class="form-title">Enregistrer un etudiant</h2>
   
         <div class="form-grid">
           <!-- First Name -->
@@ -120,12 +120,9 @@
         <!-- Conteneur pour le bouton et le lien "or Login" -->
         <div class="button-login-container">
           <button nz-button nzType="primary" [disabled]="isLoading" [nzLoading]="isLoading" class="register-button">
-            Register
+            Enregistrer
           </button>
-          <div class="login-link">
-            <span>or</span>
-            <a routerLink="/login">Log in!!</a>
-          </div>
+          
         </div>
       </form>
     </nz-content>
