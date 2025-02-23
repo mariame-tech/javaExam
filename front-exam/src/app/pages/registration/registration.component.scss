@@ -1,0 +1,68 @@
+.registration-container {
+    max-width: 600px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  
+    @media (max-width: 1024px) {
+      margin-left: 250px; // Pour éviter le débordement à cause du menu latéral
+    }
+  
+    @media (max-width: 768px) {
+      margin-left: 0;
+      max-width: 90%;
+    }
+  
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 15px;
+    }
+  
+    label {
+      font-weight: 600;
+      color: #444;
+      margin-bottom: 5px;
+    }
+  
+    nz-select,
+    textarea {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    textarea {
+      height: 80px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      resize: none;
+  
+      &:focus {
+        border-color: #1890ff;
+        outline: none;
+        box-shadow: 0 0 5px rgba(24, 144, 255, 0.5);
+      }
+    }
+  
+    .checkbox-container {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+  
+    button {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+  }
+  

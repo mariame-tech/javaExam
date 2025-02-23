@@ -1,0 +1,45 @@
+<div class="registration-container">
+    <h2>Inscription d'un étudiant</h2>
+  
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+      <!-- Sélectionner un étudiant -->
+      <label for="student">Étudiant :</label>
+      <nz-select 
+        formControlName="studentId" 
+        id="student" 
+        placeholder="Sélectionner un étudiant">
+        <nz-option *ngFor="let student of students" 
+                   [nzValue]="student.id" 
+                   [nzLabel]="student.id + ' - ' + student.firstName + ' ' + student.lastName">
+        </nz-option>
+      </nz-select>
+  
+      <!-- Sélectionner une classe -->
+      <label for="classe">Classe :</label>
+      <nz-select 
+        formControlName="classeId" 
+        id="classe" 
+        placeholder="Sélectionner une classe">
+        <nz-option *ngFor="let classe of classes" 
+                   [nzValue]="classe.id" 
+                   [nzLabel]="classe.id + ' - ' + classe.name">
+        </nz-option>
+      </nz-select>
+  
+      <!-- Description -->
+      <label for="description">Description :</label>
+      <textarea id="description" formControlName="description"></textarea>
+  
+      <!-- Archive -->
+      <label>
+        <input type="checkbox" formControlName="archive" />
+        Archiver l'inscription ?
+      </label>
+  
+      <!-- Bouton de soumission -->
+      <button nz-button nzType="primary" [disabled]="registrationForm.invalid">
+        Enregistrer
+      </button>
+    </form>
+</div>
+  
