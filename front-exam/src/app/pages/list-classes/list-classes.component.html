@@ -1,0 +1,33 @@
+<nz-table [nzData]="classes">
+    <thead>
+      <tr>
+        <th> Name</th>
+        <th>Description</th>
+        <th>Archive</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let classe of classes">
+        <td>{{ classe.name }}</td>
+        <td>{{ classe.description }}</td>
+        <td>{{ classe.archive }}</td>
+        
+        <td>
+           
+            <button nz-button nzType="link" (click)="onUpdate(classe)" >
+              <span nz-icon nzType="edit" nzTheme="outline" style="color: green;"></span>
+            </button>
+          
+            <button nz-button nzType="link" (click)=" onDelete(classe)">
+              <span nz-icon nzType="delete" nzTheme="outline" style="color: red;"></span>
+            </button>
+          </td>
+      </tr>
+    </tbody>
+  </nz-table>
+  <div class="button-container">
+    <button nz-button nzType="primary" (click)="openStudentModal()">
+      <span nz-icon nzType="plus"></span> Add Student
+    </button>
+  </div>

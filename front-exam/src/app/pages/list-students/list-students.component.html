@@ -1,1 +1,42 @@
-<p>list-students works!</p>
+<nz-table [nzData]="students">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email Pro</th>
+        <th>Email Perso</th>
+        <th>Phone Number</th>
+        <th>Address</th>
+        <th>Archive</th>
+        <th>Registration Number</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of students">
+        <td>{{ student.firstName }}</td>
+        <td>{{ student.lastName }}</td>
+        <td>{{ student.emailPro }}</td>
+        <td>{{ student.emailPerso }}</td>
+        <td>{{ student.phoneNumber }}</td>
+        <td>{{ student.address }}</td>
+        <td>{{ student.archive }}</td>
+        <td>{{ student.registrationNu }}</td>
+        <td>
+           
+            <button nz-button nzType="link" (click)="onUpdate(student)" >
+              <span nz-icon nzType="edit" nzTheme="outline" style="color: green;"></span>
+            </button>
+          
+            <button nz-button nzType="link" (click)=" onDelete(student)">
+              <span nz-icon nzType="delete" nzTheme="outline" style="color: red;"></span>
+            </button>
+          </td>
+      </tr>
+    </tbody>
+  </nz-table>
+  <div class="button-container">
+    <button nz-button nzType="primary" (click)="openStudentModal()">
+      <span nz-icon nzType="plus"></span> Add Student
+    </button>
+  </div>

@@ -1,1 +1,51 @@
-<p>classes works!</p>
+<nz-layout class="register-container">
+  <nz-content class="register-content">
+    <form [formGroup]="classForm" (ngSubmit)="onSubmit()">
+      <h2 class="form-title">{{ isUpdate ? 'Update Class' : 'Register Class' }}</h2>
+
+      <div class="form-grid">
+      
+        <div class="form-group">
+          <nz-form-control>
+            <nz-input-group [nzPrefix]="prefixUser">
+              <input nz-input formControlName="name" placeholder="Enter name" />
+            </nz-input-group>
+            <ng-template #prefixUser>
+              <i nz-icon nzType="star" nzTheme="outline"></i>
+            </ng-template>
+            <div *ngIf="getControl('name')?.invalid && getControl('fname')?.touched" class="error">
+              Class name is required
+            </div>
+          </nz-form-control>
+        </div>
+
+        <div class="form-group">
+          <nz-form-control>
+            <nz-input-group [nzPrefix]="prefixUser">
+              <input nz-input formControlName="description" placeholder="Enter description" />
+            </nz-input-group>
+            <ng-template #prefixUser>
+              <i nz-icon nzType="star" nzTheme="outline"></i>
+            </ng-template>
+            <div *ngIf="getControl('description')?.invalid && getControl('description')?.touched" class="error">
+              Class description is required
+            </div>
+          </nz-form-control>
+        </div>
+        
+        <div class="form-group">
+          <nz-form-control>
+            <label nz-checkbox formControlName="archive">Archive</label>
+          </nz-form-control>
+        </div>
+      </div>
+
+
+      <div class="button-login-container">
+        <button nz-button nzType="primary" [disabled]="isLoading" [nzLoading]="isLoading" class="register-button">
+          {{ isUpdate ? 'Update' : 'Register' }}
+        </button>
+      </div>
+    </form>
+  </nz-content>
+</nz-layout>
