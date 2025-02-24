@@ -121,11 +121,16 @@ Suivre la  meme logique pour les autres classes
 application.properties: Configurations Spring Boot
 
 log4j.xml:Configuration des logs
-        <img width="337" alt="image" src="https://github.com/user-attachments/assets/388ca2e4-388d-479f-828d-eff37a557aa7" />
+
+<img width="362" alt="image" src="https://github.com/user-attachments/assets/90aeeb39-4167-4552-9ed5-4110548221aa" />
+
+   
 
 Frontend
 
-      <img width="218" alt="image" src="https://github.com/user-attachments/assets/b01492b3-d832-4ec1-92ad-19663c48bf59" />
+<img width="198" alt="image" src="https://github.com/user-attachments/assets/74a96f5b-1199-41c4-b807-9df2d60cd0ca" />
+
+     
           
 Fonctionnalités principales
 
@@ -148,7 +153,11 @@ Frontend
 - Utilisation de Ng Zorro pour le design
 
 Endpoints API REST
+
+
 <img width="343" alt="image" src="https://github.com/user-attachments/assets/4461bc29-c8fa-4917-95a2-a0fd67ce0c8d" />
+
+
 (Similaire pour Registration et Classe)
 
 
