@@ -55,13 +55,8 @@ Backend
         
 Frontend
 
-1. Aller dans le dossier Angular :
+1. Aller dans le dossier Angular et installer les dépendances : npm install
 
-   
-<img width="526" alt="image" src="https://github.com/user-attachments/assets/7ba64b4f-e34a-4b62-800d-3f67b4a66799" />
-
-
-3. Installer les dépendances : npm install
 4. Démarrer l'application:
 
    
