@@ -40,13 +40,10 @@ Installation et exécution
 
 Backend
 
-1.  Création la base de données MySQL : examen_java_db
-2.  Configuration la base de données dans pom.xml:
-
+1.  Créer la base de données MySQL : examen_java_db
    
-  <img width="692" alt="image" src="https://github.com/user-attachments/assets/bb939095-c79d-4c8f-8d66-4cfaed52ce2a" />
-
-  
+3.  Configurer la base de données dans applications.properties
+   
 4. Lancer l'application et xampp :
 
    
