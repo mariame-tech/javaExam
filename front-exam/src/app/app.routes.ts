@@ -5,6 +5,7 @@ import { ListStudentsComponent } from './pages/list-students/list-students.compo
 import { ListClassesComponent } from './pages/list-classes/list-classes.component';
 import { RegistrationComponent } from './pages/registration/registration.component';
 
+
 export const routes: Routes = [
 
   { path: 'student', component: StudentComponent },
